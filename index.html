@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IELTS Practice</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%98%3C/text%3E%3C/svg%3E">
+<meta name="author" content="Foysal Hossen Suvo">
+<style>
+:root{--ink:#0f3b38;--mut:#55766f;--pri:#0e9f8e;--soft:rgba(14,159,142,.12);--g:rgba(255,255,255,.58);--gb:rgba(255,255,255,.85);--line:rgba(14,159,142,.22);--ok:#2f9e44;--bad:#d03c3c;--bg:radial-gradient(circle at 12% 8%,#c9f2e6 0,transparent 42%),radial-gradient(circle at 90% 20%,#e6f8f1 0,transparent 40%),radial-gradient(circle at 50% 95%,#b9ecdb 0,transparent 45%),#f2fbf7;box-sizing:border-box;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg) fixed;color:var(--ink);font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+header{text-align:center;padding:22px 16px 4px}
+header h1{margin:0;font-size:27px;color:var(--pri)}
+header p{margin:2px 0 0;color:var(--mut);font-size:14px}
+nav{display:flex;gap:8px;overflow-x:auto;padding:12px 14px;max-width:920px;margin:auto}
+nav button{flex:none;border:1px solid var(--gb);background:var(--g);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--ink);padding:8px 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer}
+nav button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+main{max-width:920px;margin:auto;padding:4px 14px 40px}
+.card{background:var(--g);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid var(--gb);border-radius:20px;padding:18px;margin-bottom:14px;box-shadow:0 8px 30px rgba(14,159,142,.12)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+h2{margin:0 0 6px;font-size:20px}h3{margin:14px 0 6px;font-size:16px}
+.mut{color:var(--mut);font-size:14px}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:12px;padding:10px 18px;font:inherit;cursor:pointer;margin:6px 6px 0 0}
+.btn.ghost{background:var(--soft);color:var(--pri)}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+.wrap{overflow-x:auto}
+.q{padding:10px 0;border-bottom:1px solid var(--line)}
+.q label{display:block;padding:5px 8px;border-radius:10px;cursor:pointer}
+.q label:hover{background:var(--soft)}
+.q input[type=text]{width:100%;max-width:320px;margin-top:4px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--g);color:var(--ink);font:inherit}
+.ok{color:var(--ok);font-weight:600}.bad{color:var(--bad);font-weight:600}
+.passage{background:var(--soft);border-radius:14px;padding:14px;font-size:15px;margin:8px 0}
+textarea{width:100%;min-height:200px;border:1px solid var(--line);border-radius:14px;padding:12px;font:inherit;background:var(--g);color:var(--ink);resize:vertical}
+.score{text-align:center;padding:16px;border-radius:16px;background:var(--soft);margin-top:12px}
+.score b{font-size:44px;color:var(--pri);display:block;line-height:1.1}
+.bar{height:10px;background:var(--soft);border-radius:99px;overflow:hidden;margin:4px 0 10px}
+.bar i{display:block;height:100%;background:var(--pri);border-radius:99px}
+.pill{display:inline-block;background:var(--soft);color:var(--pri);border-radius:99px;padding:2px 10px;font-size:12px;margin-right:6px}
+.tm{float:right;background:var(--soft);color:var(--pri);padding:3px 12px;border-radius:99px;font-weight:600;font-size:14px}
+html,body{overflow-x:hidden}
+header h1{font-size:34px;font-weight:800;letter-spacing:-.5px;background:linear-gradient(90deg,#0e9f8e,#3ccfa6);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav button{transition:all .2s}nav button:hover{transform:translateY(-1px)}
+nav button.on{background:linear-gradient(135deg,#0e9f8e,#3ccfa6);box-shadow:0 6px 16px rgba(14,159,142,.35)}
+.card{transition:transform .2s,box-shadow .2s;border-top:1px solid rgba(255,255,255,.95)}
+.grid .card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,159,142,.22)}
+.btn{background:linear-gradient(135deg,#0e9f8e,#3ccfa6);box-shadow:0 6px 14px rgba(14,159,142,.28);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}.btn:active{transform:scale(.97)}.btn.ghost{box-shadow:none}
+.ico{font-size:32px;width:60px;height:60px;display:grid;place-items:center;border-radius:18px;background:var(--soft);margin-bottom:8px}
+.hero{background:linear-gradient(135deg,rgba(14,159,142,.92),rgba(60,207,166,.88));color:#fff;border:0}.hero h2{font-size:24px}.hero p{margin:0 0 6px;opacity:.95}
+.score{background:linear-gradient(135deg,var(--soft),rgba(255,255,255,.3));border:1px solid var(--gb)}.score b{font-size:52px;font-weight:800}
+.q label:has(input:checked){background:var(--soft);box-shadow:inset 0 0 0 1px var(--pri)}
+textarea:focus,.q input[type=text]:focus{outline:2px solid var(--pri);outline-offset:1px}
+main>*{animation:up .45s ease both}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes fl{to{transform:translate(40px,30px) scale(1.15)}}
+body::before,body::after{content:"";position:fixed;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none}
+body::before{width:280px;height:280px;background:#7fe0c4;top:-70px;left:-70px;animation:fl 12s ease-in-out infinite alternate}
+body::after{width:320px;height:320px;background:#bdf0e0;bottom:-90px;right:-90px;animation:fl 15s ease-in-out infinite alternate-reverse}
+footer{text-align:center;padding:8px 16px 30px;color:var(--mut);font-size:14px}footer span{display:inline-block;background:var(--g);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--gb);border-radius:99px;padding:8px 20px;box-shadow:0 6px 20px rgba(14,159,142,.12)}footer b{background:linear-gradient(90deg,#0e9f8e,#3ccfa6);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:15px}
+</style>
+</head>
+<body>
+<header style="position:relative"><h1>IELTS Practice</h1><p>প্রতিবার নতুন প্রশ্ন · আসল পরীক্ষার ধাঁচে অনুশীলন</p></header>
+<nav id="nav"></nav>
+<main id="app"></main>
+<footer><span>💻 Developed by <b>Foysal Hossen Suvo</b></span></footer>
+<noscript><p style="padding:20px;text-align:center">JavaScript চালু করো, নইলে এই পেজ চলবে না।</p></noscript>
+<script>
+window.onerror=function(m,s,l){var a=document.getElementById("app");if(a)a.innerHTML="<div class=\"card\"><h2>সমস্যা হয়েছে</h2><p>"+m+" (লাইন "+l+")। এই লেখাটির স্ক্রিনশট পাঠাও।</p></div>"};
+const $=s=>document.querySelector(s);
+let store=[],S={},tI=null,rec=null;
+try{store=JSON.parse(localStorage.getItem("ielts")||"[]");S=JSON.parse(localStorage.getItem("seen")||"{}")}catch(e){}
+const persist=()=>{try{localStorage.setItem("ielts",JSON.stringify(store));localStorage.setItem("seen",JSON.stringify(S))}catch(e){}};
+const save=(skill,band)=>{store.push({skill,band,t:Date.now()});persist()};
+const half=x=>Math.max(1,Math.min(9,Math.round(x*2)/2));
+const rawBand=(c,t)=>{const r=c/t*40;return r>=39?9:r>=37?8.5:r>=35?8:r>=33?7.5:r>=30?7:r>=27?6.5:r>=23?6:r>=19?5.5:r>=15?5:r>=13?4.5:r>=10?4:r>=7?3.5:r>=4?3:2.5};
+const rnd=n=>Math.floor(Math.random()*n);
+function pick(k,n){let s=(S[k]||[]).filter(i=>i<n),c=[...Array(n).keys()].filter(i=>!s.includes(i));if(!c.length){s=[];c=[...Array(n).keys()]}const i=c[rnd(c.length)];s.push(i);S[k]=s;persist();return i}
+function timer(sec,end,label){clearInterval(tI);const el=$("#tm");if(!el)return;let s=sec;const f=()=>{el.textContent=(label||"⏱")+" "+String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");if(s--<=0){clearInterval(tI);end&&end()}};f();tI=setInterval(f,1000)}
+
+const TFN=["True","False","Not Given"];
+const M=(q,o,a)=>({t:"m",q,o,a}),F=(q,a)=>({t:"f",q,a:a.split("|")}),T=(q,a)=>M(q,TFN,a);
+const LIS=[
+{t:"Section 1 · হোটেল বুকিং ফর্ম পূরণ (এক শব্দ বা সংখ্যা)",s:"Good morning, Riverside Hotel, how can I help? Hello, I would like to book a room for three nights from the fourteenth of March. Certainly. A single room is eighty pounds a night, and a double is one hundred and ten. I will take a double, please. May I have your name? It is Susan Clarke, that is C L A R K E. Would you like breakfast? It is an extra eight pounds per person. Yes please.",q:[F("Arrival date: ___ March","14|14th|fourteenth"),F("Room type: ___","double"),F("Surname: ___","clarke"),F("Price per night: £___","110"),F("Breakfast extra cost per person: £___","8|eight")]},
+{t:"Section 2 · ক্যাম্পাস ট্যুর (MCQ)",s:"Welcome to the campus tour. We begin at the main library, the large brick building on your left. It is open twenty-four hours during exam weeks only. Next, the sports centre has a swimming pool, but students must book lanes in advance. The cafeteria on the ground floor of the science building serves hot meals until seven. For help with accommodation, visit the student office, which is next to the bookshop. Finally, the free bus to the city centre leaves every fifteen minutes from the north gate.",q:[M("The library is open all night:",["every day","in exam weeks","at weekends"],1),M("To use the pool, students must:",["pay extra","bring a towel","book in advance"],2),M("Hot meals are served until:",["5 pm","7 pm","9 pm"],1),M("The student office is next to the:",["bookshop","library","cafeteria"],0),M("The free bus leaves every:",["10 minutes","15 minutes","30 minutes"],1)]},
+{t:"Section 4 · লেকচার নোট পূরণ (এক শব্দ বা সংখ্যা)",s:"Today I want to talk about coral reefs. Coral reefs cover less than one percent of the ocean floor, yet they support about twenty five percent of marine species. The main threat is rising sea temperature, which causes bleaching. Another threat is pollution from farms that reaches the sea through rivers. Scientists are now growing young coral in nurseries and planting it on damaged reefs. Tourism can also help, because fees paid by divers fund protection programmes.",q:[F("Reefs cover less than ___ percent of the ocean floor","1|one"),F("They support about ___ percent of marine species","25|twenty five|twenty-five"),F("The main threat is rising sea ___","temperature"),F("Pollution comes mainly from ___","farms"),F("Fees paid by ___ fund protection","divers")]},
+{t:"Section 3 · টিউটর আলোচনা (MCQ ও পূরণ)",s:"So Mark, how is your research project going? I have chosen the topic of renewable energy, but I am struggling to find enough recent articles. Have you tried the online journal database? You can access it free from the library computers. No, I did not know that. Also, please hand in your outline by Friday, not Monday. The final report is due on the twentieth of May, and it must be three thousand words long.",q:[M("Mark’s research topic is:",["climate policy","renewable energy","public health"],1),M("His main problem is:",["finding recent articles","lack of time","choosing a topic"],0),M("The outline is due on:",["Monday","Wednesday","Friday"],2),F("Final report due: ___ May","20|20th|twentieth"),F("Report length: ___ words","3000|three thousand")]},
+{t:"Section 1 · জিমের তথ্য (সংখ্যা পূরণ ও MCQ)",s:"Hello, Fitwell Gym. Our standard membership is thirty five pounds a month, and the student rate is twenty five. There is a joining fee of ten pounds. We are open from six in the morning until ten at night. The swimming pool closes at nine. Classes such as yoga take place on Tuesday and Thursday evenings. You can pay by card or direct debit.",q:[F("Standard membership: £___ a month","35|thirty five|thirty-five"),F("Student rate: £___ a month","25|twenty five|twenty-five"),F("Joining fee: £___","10|ten"),M("The pool closes at:",["8 pm","9 pm","10 pm"],1),M("Yoga classes are on:",["Monday and Wednesday","Tuesday and Thursday","Friday only"],1)]}];
+const REA=[
+{x:"Urban beekeeping has grown rapidly in many cities over the last decade. Rooftop hives are now common in London, Paris and New York. Supporters say cities offer bees a surprising advantage: parks and gardens provide a wide range of flowers across the whole year, while farmland often offers only one crop at a time. However, some scientists warn that too many hives may compete with wild pollinators for limited food. They argue that city planners should plant more flowers rather than simply adding more hives. Studies also show that city honey contains very low levels of heavy metals.",q:[T("Urban beekeeping has grown slowly in recent years.",1),T("Rooftop hives can be found in Paris.",0),T("City honey is more expensive than country honey.",2),M("What do some scientists suggest?",["Banning hives","Planting more flowers","Moving hives to farms"],1),F("Farmland often offers only one ___ at a time.","crop"),F("City honey contains very low levels of heavy ___.","metals")]},
+{x:"Sleep researchers have found that teenagers naturally fall asleep later than children or adults. This is caused by a shift in the body clock during puberty, not by laziness. Yet most schools start before eight in the morning, forcing many students to wake up when their bodies still expect to sleep. A trial in Seattle moved the start time by almost an hour, and students slept thirty-four minutes longer on average, with higher attendance. Some parents worried that later finishing times would disrupt sports, but the study did not examine this issue.",q:[T("Teenagers fall asleep later because they are lazy.",1),T("Most schools start before eight in the morning.",0),T("Later finishing times harmed school sports in Seattle.",2),M("The main cause of late sleep is:",["Homework","A body clock shift","Screen time"],1),F("Students slept ___ minutes longer on average.","34|thirty-four|thirty four"),F("The trial also recorded higher ___.","attendance")]},
+{x:"The Silk Road was not a single road but a network of trade routes linking China with the Mediterranean for more than a thousand years. Merchants rarely travelled the whole distance; goods were passed from trader to trader. Silk was valuable, but paper, spices and glass also moved along the routes. Ideas travelled too: Buddhism spread from India into China, and techniques for making paper reached the Islamic world. The routes declined when sea transport became cheaper and safer.",q:[T("The Silk Road was one single road.",1),T("Merchants usually travelled the entire route.",1),T("Paper-making techniques reached the Islamic world.",0),M("The routes declined because:",["wars","sea transport improved","silk lost value"],1),F("Besides silk, paper and spices, ___ was also traded.","glass"),F("Buddhism spread from India into ___.","china")]},
+{x:"Tea is the second most consumed drink in the world after water. According to legend, it was discovered in China around 2737 BC when leaves fell into the emperor’s boiling water. By the seventeenth century, tea reached Europe through Dutch traders. In Britain, heavy taxes led to widespread smuggling, and prices fell only after the tax was reduced in 1784. Today India and China are the largest producers, though most tea is still picked by hand.",q:[T("Tea is the most consumed drink in the world.",1),T("Tea reached Europe through Dutch traders.",0),T("Most tea today is picked by machine.",1),T("Tea is healthier than coffee.",2),M("Prices in Britain fell after:",["a war ended","the tax was reduced","new farms opened"],1),F("Tea arrived in Europe in the ___ century.","seventeenth|17th|17")]},
+{x:"Remote work expanded dramatically after 2020. A survey of 2,000 employees found that productivity stayed the same or improved for most people working at home. Nevertheless, many reported feeling isolated, and younger workers said they missed learning from colleagues. Companies are now experimenting with hybrid schedules, in which staff spend two or three days in the office. Experts believe that offices will remain, but will be redesigned as places for meetings rather than individual work.",q:[T("Most employees reported lower productivity at home.",1),T("Younger workers missed learning from colleagues.",0),T("All large companies already use hybrid work.",2),M("Offices will be redesigned as places for:",["meetings","storage","individual work"],0),F("Hybrid staff spend two or ___ days in the office.","three|3"),F("Many remote employees felt ___.","isolated")]}];
+const W1=[{p:"The table shows the percentage of households with internet access in four countries in 2000 and 2020.",c:["Country","2000","2020"],r:[["Canada",51,93],["Brazil",9,74],["India",1,52],["Sweden",70,97]]},{p:"The table shows average monthly household spending (in dollars) on three categories in 2010 and 2020.",c:["Category","2010","2020"],r:[["Housing",900,1250],["Food",450,520],["Transport",300,260]]},{p:"The table shows the number of tourists (in millions) visiting three cities in 2005 and 2019.",c:["City","2005","2019"],r:[["Paris",15,19],["Dubai",6,16],["Tokyo",6,32]]},{p:"The table shows the percentage of adults who read books regularly in three age groups in 1990 and 2020.",c:["Age group","1990","2020"],r:[["18–29",62,48],["30–49",55,50],["50+",40,52]]},{p:"The table shows the average weekly hours of exercise of men and women in four countries.",c:["Country","Men","Women"],r:[["Australia",5.2,4.1],["Japan",3.0,2.4],["Norway",6.1,5.8],["Egypt",2.2,1.5]]}];
+const W2=["Some people believe that children should start learning a foreign language at primary school, while others think it is better to wait until secondary school. Discuss both views and give your own opinion.","Many people now work from home instead of in an office. Do the advantages of this trend outweigh the disadvantages?","Some people think governments should spend money on public transport rather than building new roads. To what extent do you agree or disagree?","In many countries, young people spend more time on social media than with family. What problems does this cause and what solutions can you suggest?","Some people think that university education should be free for everyone, while others believe students should pay for it. Discuss both views and give your own opinion.","Nowadays many people choose to buy goods online rather than in shops. Is this a positive or negative development?","Some argue that the best way to reduce crime is to give longer prison sentences. Others believe there are better alternatives. Discuss both views and give your opinion."];
+const P1=[["Hometown",["Where is your hometown?","What do you like most about it?","Has your hometown changed much in recent years?"]],["Study",["What subject are you studying?","Why did you choose it?","What are your plans after you finish?"]],["Food",["What kind of food do you enjoy?","Do you cook at home?","Has your diet changed since you were a child?"]],["Work",["Do you work or are you a student?","What do you like about your job or studies?","Would you like to change your job in the future?"]],["Free time",["What do you do in your free time?","Do you prefer spending time alone or with friends?","How has the way you spend free time changed over the years?"]]];
+const P2=[["Describe a teacher who influenced you. You should say who the teacher was, what they taught you, how they helped you, and explain why you remember them.",["Do you think teachers are respected in your country?","How can technology help teachers?","Should students choose their own subjects?"]],["Describe a journey you enjoyed. You should say where you went, who you went with, what you did, and explain why it was enjoyable.",["Why do people like to travel?","Does tourism harm local culture?","Will people travel more in the future?"]],["Describe a book you have read recently. You should say what it was about, why you read it, what you learned, and explain whether you would recommend it.",["Do people read less than in the past?","Are e-books better than paper books?","How can children be encouraged to read?"]],["Describe a time when you helped someone. You should say who you helped, how you helped them, why they needed help, and explain how you felt about it.",["Why do some people not help others?","Should children be taught to volunteer?","Is helping others more common in small communities?"]],["Describe a skill you would like to learn. You should say what it is, why you want to learn it, how you would learn it, and explain how it would help you.",["Which skills are most important for young people today?","Is it better to learn skills at school or at work?","Will technology change which skills people need?"]]];
+
+const TABS=[["home","হোম"],["listening","Listening"],["reading","Reading"],["writing","Writing"],["speaking","Speaking"],["vocab","শব্দভান্ডার"],["tools","টুলস"],["progress","প্রোগ্রেস"]];
+const V={};
+function go(v){clearInterval(tI);window.speechSynthesis&&speechSynthesis.cancel();try{rec&&rec.stop()}catch(e){}$("#nav").innerHTML=TABS.map(t=>`<button class="${t[0]===v?"on":""}" onclick="go('${t[0]}')">${t[1]}</button>`).join("");V[v]();window.scrollTo(0,0)}
+
+function quiz(skill,qs,box,pre,secs,post){
+  box.innerHTML=pre+qs.map((q,i)=>`<div class="q"><div>${i+1}. ${q.q}</div>`+(q.t=="f"?`<input type="text" id="a${i}" placeholder="উত্তর লেখো">`:q.o.map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${o}</label>`).join(""))+`<div id="f${i}"></div></div>`).join("")+`<button class="btn" id="sub">জমা দাও ও স্কোর দেখো</button><div id="res"></div>`;
+  let done=0;
+  const sub=()=>{if(done)return;done=1;clearInterval(tI);let c=0;
+    qs.forEach((q,i)=>{let ok=0;if(q.t=="f")ok=q.a.includes($("#a"+i).value.trim().toLowerCase().replace(/^£/,""));else{const s=document.querySelector(`input[name=q${i}]:checked`);ok=s&&+s.value==q.a}
+      if(ok)c++;$("#f"+i).innerHTML=ok?'<span class="ok">সঠিক ✓</span>':`<span class="bad">ভুল ✗</span> সঠিক উত্তর: ${q.t=="f"?q.a[0]:q.o[q.a]}`});
+    const b=rawBand(c,qs.length);save(skill,b);
+    $("#res").innerHTML=`<div class="score"><b>Band ${b}</b>${c} / ${qs.length} সঠিক<div class="mut">৪০ প্রশ্নের স্কেলে আনুমানিক ব্যান্ড</div></div>${post||""}<button class="btn" onclick="go('${skill.toLowerCase()}')">নতুন প্রশ্ন সেট</button>`};
+  $("#sub").onclick=sub;if(secs)timer(secs,sub);
+}
+V.home=()=>{
+  const c=[["listening","Listening","৪ সেকশনের ধাঁচে অডিও, ফর্ম/নোট পূরণ ও MCQ","৩০ মিনিট · ৪০ প্রশ্ন"],["reading","Reading","True/False/Not Given, MCQ ও সেন্টেন্স কমপ্লিশন","৬০ মিনিট · ৪০ প্রশ্ন"],["writing","Writing","Task 1 (ডেটা টেবিল) ও Task 2 (essay)","৬০ মিনিট"],["speaking","Speaking","Part 1, Part 2 (cue card + প্রস্তুতি টাইমার), Part 3","১১–১৪ মিনিট"]];
+  $("#app").innerHTML=`<div class="card hero"><h2>তোমার IELTS প্রস্তুতি, এক জায়গায় ✨</h2><p>Listening, Reading, Writing, Speaking — টাইমার ও স্কোরসহ, প্রতিবার নতুন প্রশ্ন।</p><button class="btn" style="background:#fff;color:#0e9f8e" onclick="go('listening')">এখনই শুরু করো →</button></div><div class="grid">${c.map(x=>`<div class="card"><div class="ico">${{listening:"🎧",reading:"📖",writing:"✍️",speaking:"🎤"}[x[0]]}</div><h2>${x[1]}</h2><span class="pill">${x[3]}</span><p class="mut">${x[2]}</p><button class="btn" onclick="go('${x[0]}')">প্র্যাকটিস শুরু</button></div>`).join("")}</div>
+  <div class="card"><h2>IELTS পরীক্ষা কীভাবে হয়?</h2><p class="mut">৪টি অংশের প্রতিটিতে ০–৯ ব্যান্ড দেওয়া হয়। ৪টির গড় (নিকটতম ০.৫) হলো Overall Band।</p><div class="wrap"><table class="tbl"><tr><th>অংশ</th><th>সময়</th><th>গঠন</th></tr><tr><td>Listening</td><td>৩০ মি + ১০ মি ট্রান্সফার</td><td>৪ সেকশন, ৪০ প্রশ্ন, অডিও একবারই চলে</td></tr><tr><td>Reading</td><td>৬০ মি</td><td>৩ প্যাসেজ, ৪০ প্রশ্ন</td></tr><tr><td>Writing</td><td>৬০ মি</td><td>Task 1: ১৫০+ শব্দ (২০ মি), Task 2: ২৫০+ শব্দ (৪০ মি)</td></tr><tr><td>Speaking</td><td>১১–১৪ মি</td><td>Part 1 পরিচয়, Part 2 এক মিনিট প্রস্তুতি + ২ মিনিট বক্তব্য, Part 3 আলোচনা</td></tr></table></div></div>
+  <div class="card"><h3>এই সাইটে স্কোর কীভাবে হয়?</h3><p class="mut">Listening ও Reading সঠিক উত্তর গুনে ব্যান্ডে রূপান্তর হয়। Writing ও Speaking-এ শব্দসংখ্যা, গঠন, শব্দভান্ডার ও সংযোজক শব্দ বিশ্লেষণ করে আনুমানিক ব্যান্ড দেওয়া হয়, যা আসল পরীক্ষকের স্কোরের বিকল্প নয়। প্রতিবার না-দেখা নতুন সেট আসে।</p></div>`;
+};
+V.listening=()=>{
+  const i=pick("L",LIS.length),d=LIS[i];let plays=0;
+  $("#app").innerHTML=`<div class="card"><div class="tm" id="tm"></div><h2>Listening · Set ${i+1}</h2><p class="mut">${d.t}। অডিও সর্বোচ্চ ২ বার চলবে।</p><button class="btn" id="play">▶ Play audio</button><button class="btn ghost" onclick="go('listening')">নতুন সেট</button><div class="mut" id="note"></div><div id="box"></div></div>`;
+  $("#play").onclick=()=>{if(!window.speechSynthesis){$("#note").textContent="অডিও সাপোর্ট নেই। Script: "+d.s;return}if(plays>=2){$("#note").textContent="সর্বোচ্চ ২ বার শোনা যায়";return}plays++;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(d.s);u.lang="en-GB";u.rate=.88;speechSynthesis.speak(u);$("#note").textContent="চলছে ("+plays+"/2)"};
+  quiz("Listening",d.q,$("#box"),"",600,`<h3>Audio Script</h3><div class="passage">${d.s}</div>`);
+};
+V.reading=()=>{
+  const i=pick("R",REA.length),d=REA[i];
+  $("#app").innerHTML=`<div class="card"><div class="tm" id="tm"></div><h2>Reading · Passage ${i+1}</h2><p class="mut">Questions 1–${d.q.length}: Choose True, False or Not Given, choose the correct letter, or complete the sentences with ONE WORD.</p><div id="box"></div></div>`;
+  quiz("Reading",d.q,$("#box"),`<div class="passage">${d.x}</div>`,1200);
+};
+V.writing=()=>{
+  $("#app").innerHTML=`<div class="card"><h2>Writing</h2><p class="mut">কোন টাস্ক অনুশীলন করবে?</p><button class="btn" onclick="wr(1)">Task 1 · ডেটা বর্ণনা (১৫০ শব্দ)</button><button class="btn" onclick="wr(2)">Task 2 · Essay (২৫০ শব্দ)</button></div>`;
+};
+function wr(k){
+  const min=k==1?150:250;let h;
+  if(k==1){const d=W1[pick("W1",W1.length)];h=`${d.p} Summarise the information by selecting and reporting the main features, and make comparisons where relevant.<div class="wrap"><table class="tbl"><tr>${d.c.map(x=>`<th>${x}</th>`).join("")}</tr>${d.r.map(r=>`<tr>${r.map(x=>`<td>${x}</td>`).join("")}</tr>`).join("")}</table></div>`}
+  else h=W2[pick("W2",W2.length)]+" Give reasons for your answer and include any relevant examples from your own knowledge or experience.";
+  $("#app").innerHTML=`<div class="card"><div class="tm" id="tm"></div><h2>Writing Task ${k}</h2><div class="passage">${h}</div><p class="mut">Write at least ${min} words.</p><textarea id="wt" placeholder="এখানে লেখো..."></textarea><div class="mut" id="wc">0 words</div><button class="btn" id="ws">স্কোর দেখো</button><button class="btn ghost" onclick="wr(${k})">নতুন প্রশ্ন</button><div id="res"></div></div>`;
+  $("#wt").oninput=function(){$("#wc").textContent=this.value.trim().split(/\s+/).filter(Boolean).length+" words"};
+  const sub=()=>{clearInterval(tI);const r=evalW($("#wt").value,min);if(!r){$("#res").innerHTML='<p class="bad">আগে কিছু লেখো।</p>';return}save("Writing",r.o);$("#res").innerHTML=report(r)};
+  $("#ws").onclick=sub;timer(k==1?1200:2400,sub);
+}
+function evalW(t,min){
+  const w=t.trim().split(/\s+/).filter(Boolean),n=w.length;if(n<5)return null;
+  const paras=t.split(/\n\s*\n/).filter(x=>x.trim()).length,need=min>200?4:3;
+  const lk=(t.match(/\b(however|moreover|furthermore|therefore|in addition|for example|for instance|on the other hand|in conclusion|consequently|although|whereas|because|as a result|firstly|secondly|finally|while|overall|in contrast)\b/gi)||[]).length;
+  const uniq=new Set(w.map(x=>x.toLowerCase().replace(/[^a-z]/g,""))).size/n,long=w.filter(x=>x.replace(/[^a-z]/gi,"").length>=8).length/n;
+  const sent=Math.max(1,t.split(/[.!?]+/).filter(s=>s.trim()).length),avg=n/sent,commas=(t.match(/,/g)||[]).length/sent;
+  let tr=n>=min?6.5:n>=min*.8?5.5:n>=min*.6?4.5:n>=min*.3?3.5:2;if(paras>=need)tr+=.5;
+  const low=n<min*.3;
+  const cc=low?3:4.5+Math.min(lk,8)*.4+(paras>=need?.5:0),lr=low?3:4.5+Math.max(0,uniq-.45)*6+long*6,gr=low?3:(avg>=12&&avg<=26?5.5:4.5)+Math.min(commas,1.2)*.8+(lk>3?.5:0);
+  const c=[["Task Achievement/Response",tr],["Coherence & Cohesion",cc],["Lexical Resource",lr],["Grammar Range",gr]].map(x=>[x[0],half(Math.min(x[1],8))]);
+  const tips=[];if(n<min)tips.push(`শব্দসংখ্যা ${min}-এর কম, আরও তথ্য বা যুক্তি যোগ করো।`);if(paras<need)tips.push(`কমপক্ষে ${need}টি অনুচ্ছেদ লেখো (ভূমিকা, মূল অংশ, উপসংহার/overview)।`);if(lk<4)tips.push("However, Moreover, For example, In contrast-এর মতো সংযোজক শব্দ ব্যবহার করো।");if(uniq<.55)tips.push("একই শব্দ বারবার না লিখে সমার্থক শব্দ ব্যবহার করো।");if(!tips.length)tips.push("ভালো হয়েছে! এবার জটিল বাক্য ও নির্ভুল ব্যাকরণে মনোযোগ দাও।");
+  return{o:half(c.reduce((a,x)=>a+x[1],0)/c.length),c,tips,n};
+}
+function report(r){return `<div class="score"><b>Band ${r.o}</b>${r.n} শব্দ বিশ্লেষণ করা হয়েছে</div><h3>ক্রাইটেরিয়া অনুযায়ী</h3>${r.c.map(x=>`<div>${x[0]} · <b>${x[1]}</b></div><div class="bar"><i style="width:${x[1]/9*100}%"></i></div>`).join("")}<h3>উন্নতির পরামর্শ</h3><ul>${r.tips.map(t=>`<li>${t}</li>`).join("")}</ul><p class="mut">এটি স্বয়ংক্রিয় আনুমানিক স্কোর, আসল পরীক্ষকের মূল্যায়ন নয়।</p>`}
+
+V.speaking=()=>{
+  const a=P1[pick("S1",P1.length)],b=P2[pick("S2",P2.length)],tg=[40,150,80];
+  const items=[...a[1].map(q=>({p:1,q})),{p:2,q:b[0]},...b[1].map(q=>({p:3,q}))],ans=[];let i=0;
+  const show=()=>{const it=items[i];
+    $("#app").innerHTML=`<div class="card"><div class="tm" id="tm"></div><h2>Speaking · Part ${it.p}</h2><span class="pill">${i+1} / ${items.length}</span>${it.p==1?`<span class="pill">Topic: ${a[0]}</span>`:""}<div class="passage">${it.q}</div><p class="mut">${it.p==2?"১ মিনিট প্রস্তুতি নাও, তারপর ২ মিনিট বলো।":"ইংরেজিতে উত্তর দাও। Mic না চললে টাইপ করো।"}</p><button class="btn" id="mic">🎤 Start speaking</button><button class="btn ghost" id="hear">🔊 প্রশ্ন শোনো</button><textarea id="st" style="min-height:130px" placeholder="উত্তর এখানে..."></textarea><button class="btn" id="nx">${i<items.length-1?"পরের প্রশ্ন →":"শেষ করো ও স্কোর দেখো"}</button></div>`;
+    if(it.p==2)timer(60,()=>timer(120,null,"🗣"),"📝");
+    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;let on=0;
+    $("#mic").onclick=()=>{if(!SR){$("#mic").textContent="mic সাপোর্ট নেই, টাইপ করো";return}if(on){rec.stop();return}
+      rec=new SR();rec.lang="en-US";rec.continuous=true;const base=$("#st").value;
+      rec.onresult=e=>{let s="";for(let k=0;k<e.results.length;k++)s+=e.results[k][0].transcript+" ";$("#st").value=(base+" "+s).trim()};
+      rec.onend=()=>{on=0;$("#mic").textContent="🎤 Start speaking"};rec.start();on=1;$("#mic").textContent="■ Stop"};
+    $("#hear").onclick=()=>{if(window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(it.q);u.lang="en-GB";u.rate=.9;speechSynthesis.speak(u)}};
+    $("#nx").onclick=()=>{window.speechSynthesis&&speechSynthesis.cancel();try{rec&&rec.stop()}catch(e){}clearInterval(tI);ans.push({p:it.p,t:$("#st").value.trim()});i++;i<items.length?show():fin()};
+  };
+  const fin=()=>{
+    const sc=ans.map(x=>{const w=x.t.split(/\s+/).filter(Boolean),n=w.length,T=tg[x.p-1];if(n<3)return[2,2,2];
+      const fill=(x.t.match(/\b(um|uh|er|erm|you know)\b/gi)||[]).length/n,u=new Set(w.map(y=>y.toLowerCase())).size/n,lg=w.filter(y=>y.length>=7).length/n,sn=Math.max(1,x.t.split(/[.!?]+/).filter(s=>s.trim()).length),r=Math.min(n/T,1);
+      return[Math.min(4+r*2.5-fill*6,8),Math.min(4+r+Math.max(0,u-.4)*4+lg*6,8),Math.min(4.5+r+Math.min(n/sn/15,1),8)]});
+    const avg=k=>sc.reduce((m,x)=>m+x[k],0)/sc.length;
+    const c=[["Fluency & Coherence",half(avg(0))],["Lexical Resource",half(avg(1))],["Grammar Range",half(avg(2))]],o=half(c.reduce((m,x)=>m+x[1],0)/3),words=ans.reduce((m,x)=>m+x.t.split(/\s+/).filter(Boolean).length,0);
+    save("Speaking",o);
+    const tips=[];if(ans.some((x,k)=>x.t.split(/\s+/).filter(Boolean).length<tg[x.p-1]*.7))tips.push("কিছু উত্তর ছোট ছিল। কারণ ও উদাহরণ দিয়ে লম্বা করো (Part 1: ~৪০, Part 2: ~১৫০, Part 3: ~৮০ শব্দ)।");tips.push("Um, uh কমিয়ে থেমে ভেবে বলো।");
+    $("#app").innerHTML=`<div class="card"><h2>Speaking ফলাফল</h2>${report({o,c,tips,n:words})}<p class="mut">উচ্চারণ স্বয়ংক্রিয়ভাবে মাপা হয়নি।</p><button class="btn" onclick="go('speaking')">নতুন প্রশ্ন সেট</button></div>`;
+  };
+  show();
+};
+V.progress=()=>{
+  if(!store.length){$("#app").innerHTML='<div class="card"><h2>তোমার প্রোগ্রেস</h2><p class="mut">এখনো কোনো প্র্যাকটিস করোনি। যেকোনো অংশ শেষ করলে এখানে স্কোর জমা হবে।</p><button class="btn" onclick="go(\'listening\')">শুরু করো</button></div>';return}
+  const av=["Listening","Reading","Writing","Speaking"].map(s=>{const a=store.filter(x=>x.skill===s);return[s,a.length,a.length?a.reduce((m,x)=>m+x.band,0)/a.length:0,a.length?a[a.length-1].band:0]}),dn=av.filter(a=>a[1]);
+  $("#app").innerHTML=`<div class="card"><h2>তোমার প্রোগ্রেস</h2>${topBlock(dn)}<h3>অংশ অনুযায়ী</h3>${av.map(a=>`<div>${a[0]} · গড় <b>${a[1]?half(a[2]):"-"}</b> · সর্বশেষ ${a[1]?a[3]:"-"} · ${a[1]} বার</div><div class="bar"><i style="width:${a[2]/9*100}%"></i></div>`).join("")}<h3>সাম্প্রতিক ফলাফল</h3>${store.slice(-8).reverse().map(x=>`<div class="mut">${x.skill}: Band ${x.band} · ${new Date(x.t).toLocaleDateString()}</div>`).join("")}<button class="btn ghost" id="clr">সব মুছে ফেলো</button></div>`;
+  $("#clr").onclick=()=>{store=[];S={};persist();V.progress()};
+};
+const gT=()=>{try{return +localStorage.getItem("target")||7}catch(e){return 7}};
+function setT(v){try{localStorage.setItem("target",v)}catch(e){}V.progress()}
+function streak(){const d=new Set(store.map(x=>new Date(x.t).toDateString()));let n=0,c=new Date();if(!d.has(c.toDateString()))c.setDate(c.getDate()-1);while(d.has(c.toDateString())){n++;c.setDate(c.getDate()-1)}return n}
+function topBlock(dn){const o=half(dn.reduce((m,a)=>m+a[2],0)/dn.length),t=gT(),last=store.slice(-10),y=b=>100-b/9*100,pts=last.map((x,i)=>`${last.length>1?i*300/(last.length-1):150},${y(x.band)}`).join(" "),today=store.filter(x=>new Date(x.t).toDateString()==new Date().toDateString()).length;
+  return `<div class="score"><b>${o}</b>Overall Band (গড়)<div class="mut">টার্গেট ${t} · ${o>=t?"টার্গেট ছুঁয়ে ফেলেছো! 🎉":"আরও "+(t-o)+" ব্যান্ড বাকি"}<br>🔥 ${streak()} দিনের স্ট্রিক · আজ ${today}টি প্র্যাকটিস</div></div><label class="mut">টার্গেট ব্যান্ড: <select onchange="setT(this.value)">${[5,5.5,6,6.5,7,7.5,8,8.5,9].map(v=>`<option ${v==t?"selected":""}>${v}</option>`).join("")}</select></label><h3>সাম্প্রতিক ১০টি স্কোরের গ্রাফ</h3><svg viewBox="-8 -8 316 116" style="width:100%;max-height:150px"><line x1="0" x2="300" y1="${y(t)}" y2="${y(t)}" stroke="currentColor" stroke-dasharray="4" opacity=".4"/><polyline fill="none" stroke="var(--pri)" stroke-width="3" stroke-linejoin="round" points="${pts}"/>${last.map((x,i)=>`<circle r="4" fill="var(--pri)" cx="${last.length>1?i*300/(last.length-1):150}" cy="${y(x.band)}"/>`).join("")}</svg><div class="mut">ড্যাশ লাইন = তোমার টার্গেট</div>`}
+const WORDS=[["mitigate","প্রশমিত করা","Governments must mitigate the effects of climate change."],["substantial","উল্লেখযোগ্য","There was a substantial increase in prices."],["fluctuate","ওঠানামা করা","Temperatures fluctuate throughout the year."],["detrimental","ক্ষতিকর","Smoking is detrimental to health."],["inevitable","অবশ্যম্ভাবী","Change is inevitable."],["advocate","সমর্থন করা","Many experts advocate healthier diets."],["comprehensive","সামগ্রিক","A comprehensive study was carried out."],["sustainable","টেকসই","We need sustainable energy sources."],["scarce","দুষ্প্রাপ্য","Water is scarce in some regions."],["alleviate","লাঘব করা","Better transport can alleviate traffic."],["controversial","বিতর্কিত","The policy is highly controversial."],["enhance","উন্নত করা","Exercise can enhance concentration."],["curb","নিয়ন্ত্রণ করা","Taxes can curb pollution."],["disparity","বৈষম্য, ব্যবধান","There is a disparity between rich and poor."],["consequently","ফলস্বরূপ","Prices rose; consequently, demand fell."],["prevalent","বহুল প্রচলিত","Obesity is prevalent in many countries."],["adequate","পর্যাপ্ত","The funding is not adequate."],["considerable","যথেষ্ট","A considerable number of students agreed."],["diminish","হ্রাস পাওয়া","Interest in the topic began to diminish."],["abundant","প্রচুর","Fresh fruit is abundant in summer."],["inhibit","বাধা দেওয়া","Stress can inhibit learning."],["trigger","সূচনা করা","Pollution can trigger asthma."],["prioritise","অগ্রাধিকার দেওয়া","Governments should prioritise education."],["contemporary","সমসাময়িক","Contemporary art attracts young visitors."]];
+V.vocab=()=>{
+  let known=[];try{known=JSON.parse(localStorage.getItem("vk")||"[]")}catch(e){}
+  const setK=k=>{try{localStorage.setItem("vk",JSON.stringify(k))}catch(e){}},left=WORDS.map((w,i)=>i).filter(i=>!known.includes(i));
+  if(!left.length){$("#app").innerHTML=`<div class="card"><h2>শব্দভান্ডার</h2><p>অভিনন্দন! সব ${WORDS.length}টি শব্দ শিখে ফেলেছো 🎉</p><button class="btn" id="rs">আবার শুরু করো</button></div>`;$("#rs").onclick=()=>{setK([]);V.vocab()};return}
+  const i=left[rnd(left.length)],w=WORDS[i];
+  $("#app").innerHTML=`<div class="card"><h2>IELTS শব্দভান্ডার</h2><span class="pill">শেখা হয়েছে ${known.length} / ${WORDS.length}</span><div class="passage" style="text-align:center"><div style="font-size:30px;font-weight:700;color:var(--pri)">${w[0]}</div><button class="btn ghost" id="sp">🔊 উচ্চারণ</button><div id="mn" style="display:none"><h3>${w[1]}</h3><div class="mut">${w[2]}</div></div></div><button class="btn" id="sh">অর্থ দেখো</button><button class="btn ghost" id="kn">জানি ✓</button><button class="btn ghost" id="nk">পরে আবার দেখাও</button></div>`;
+  $("#sp").onclick=()=>{if(window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(w[0]);u.lang="en-GB";speechSynthesis.speak(u)}};
+  $("#sh").onclick=()=>{$("#mn").style.display="block"};
+  $("#kn").onclick=()=>{known.push(i);setK(known);V.vocab()};
+  $("#nk").onclick=()=>V.vocab();
+};
+V.tools=()=>{
+  const L=a=>`<ul>${a.map(x=>`<li>${x}</li>`).join("")}</ul>`;
+  $("#app").innerHTML=`<div class="card"><h2>Overall Band ক্যালকুলেটর</h2><p class="mut">৪টি অংশের ব্যান্ড দিলে Overall বের হবে।</p><div class="grid">${["Listening","Reading","Writing","Speaking"].map(s=>`<label class="mut">${s}<input type="number" min="0" max="9" step="0.5" class="cin" style="width:100%;padding:8px;border-radius:10px;border:1px solid var(--line);background:var(--g);color:var(--ink);font:inherit"></label>`).join("")}</div><button class="btn" id="calc">হিসাব করো</button><div id="cres"></div></div>
+  <div class="card"><h2>Useful Phrases</h2><h3>Writing Task 1</h3>${L(["The table illustrates / shows ...","It is clear that ... was the highest.","X rose sharply from A to B.","In contrast, Y remained stable.","Overall, the main trend is ..."])}<h3>Writing Task 2</h3>${L(["It is often argued that ...","On the one hand, ... On the other hand, ...","A major advantage of this is ...","In my opinion, ...","In conclusion, I firmly believe that ..."])}<h3>Speaking</h3>${L(["Well, to be honest, ...","That is an interesting question, I would say ...","What I mean is ...","For instance, ...","I have never really thought about it, but ..."])}</div>
+  <div class="card"><h3>প্রোগ্রেস ব্যাকআপ</h3><p class="mut">ব্রাউজার বদলালে বা ডেটা মুছলে প্রোগ্রেস হারাতে পারো। কোড কপি করে রাখো, পরে পেস্ট করে ফিরিয়ে আনো।</p><textarea id="bk" style="min-height:80px"></textarea><button class="btn" id="bex">ব্যাকআপ কোড তৈরি</button><button class="btn ghost" id="bim">কোড থেকে ফিরিয়ে আনো</button><div id="bmsg" class="mut"></div></div>
+  <div class="card"><h3>পরীক্ষার দিনের টিপস</h3>${L(["Listening: প্রশ্ন আগে পড়ো, বানান ও সংখ্যা ঠিক লেখো।","Reading: সময় ভাগ করো, একটি প্রশ্নে আটকে থেকো না।","Writing: শুরুর ২-৩ মিনিট plan করো, শেষে ২ মিনিট চেক করো।","Speaking: থেমে না গিয়ে সহজ বাক্যে হলেও বলে যাও।"])}</div>`;
+  $("#bex").onclick=()=>{let vk="[]";try{vk=localStorage.getItem("vk")||"[]"}catch(e){}$("#bk").value=btoa(unescape(encodeURIComponent(JSON.stringify({s:store,seen:S,vk:JSON.parse(vk),t:gT()}))));$("#bk").select();$("#bmsg").textContent="কোড তৈরি হয়েছে, কপি করে রাখো।"};
+  $("#bim").onclick=()=>{try{const d=JSON.parse(decodeURIComponent(escape(atob($("#bk").value.trim()))));store=d.s||[];S=d.seen||{};persist();localStorage.setItem("vk",JSON.stringify(d.vk||[]));localStorage.setItem("target",d.t||7);$("#bmsg").textContent="ফিরিয়ে আনা হয়েছে ✓"}catch(e){$("#bmsg").textContent="কোডটি ঠিক নেই।"}};
+  $("#calc").onclick=()=>{const v=[...document.querySelectorAll(".cin")].map(x=>parseFloat(x.value));$("#cres").innerHTML=v.some(x=>isNaN(x)||x<0||x>9)?'<p class="bad">৪টি ঘরেই ০–৯ এর মধ্যে ব্যান্ড দাও।</p>':`<div class="score"><b>${Math.round(v.reduce((a,b)=>a+b,0)/4*2)/2}</b>Overall Band</div>`};
+};
+go("home");
+</script>
+</body>
+</html>
